@@ -5,11 +5,13 @@ metadata:
 spec:
   title: "Java Workshop #3"
   description: "Install Java extensions from local web server."
+  publish:
+    image: $(image_repository)/labs-java-dev-testing/lab-example-workshop-3:$(workshop_version)
   workshop:
     image: jdk17-environment:*
     files:
     - image:
-        url: "$(image_repository)/labs-java-dev-testing-files:latest"
+        url: $(image_repository)/labs-java-dev-testing/lab-example-workshop-3:$(workshop_version)
       includePaths:
       - /workshops/lab-example-workshop-3/workshop/**
       - /workshops/lab-example-workshop-3/exercises/**
