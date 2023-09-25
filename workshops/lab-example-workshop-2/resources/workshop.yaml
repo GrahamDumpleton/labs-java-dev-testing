@@ -5,11 +5,13 @@ metadata:
 spec:
   title: "Java Workshop #2"
   description: "Install Java extensions from GitHub"
+  publish:
+    image: $(image_repository)/labs-java-dev-testing/lab-example-workshop-2:$(workshop_version)
   workshop:
     image: jdk17-environment:*
     files:
     - image:
-        url: "$(image_repository)/labs-java-dev-testing-files:latest"
+        url: $(image_repository)/labs-java-dev-testing/lab-example-workshop-2:$(workshop_version)
       includePaths:
       - /workshops/lab-example-workshop-2/workshop/**
       - /workshops/lab-example-workshop-2/exercises/**
